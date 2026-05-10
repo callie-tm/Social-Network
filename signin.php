@@ -3,9 +3,9 @@
  * Sign In Page
  * Social Network Application
  */
-require_once __DIR__ . '/../includes/config.php';
-require_once __DIR__ . '/../includes/session.php';
-require_once __DIR__ . '/../includes/functions.php';
+require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/session.php';
+require_once __DIR__ . '/includes/functions.php';
 
 // Redirect if already logged in
 if (isLoggedIn()) {
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sign in to SocialNet">
     <title>Sign In - SocialNet</title>
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/socialnet/assets/style.css">
 </head>
 <body>
     <div class="auth-wrapper">
@@ -80,10 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
 
             <div style="text-align:center;margin-top:20px;">
-                <a href="/admin/newuser.php" style="color:var(--text-muted);font-size:0.85rem;">Admin: Create New User →</a>
+                <a href="/socialnet/admin/newuser.php" style="color:var(--text-muted);font-size:0.85rem;">Admin: Create New User →</a>
             </div>
         </div>
     </div>
-    <script src="/assets/script.js"></script>
+    <script src="/socialnet/assets/script.js"></script>
 </body>
 </html>

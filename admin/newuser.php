@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Admin - Create new user for SocialNet">
     <title>Create New User - SocialNet Admin</title>
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/socialnet/assets/style.css">
 </head>
 <body>
     <div class="auth-wrapper">
@@ -116,6 +116,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </div>
-    <script src="/assets/script.js"></script>
+    <script src="/socialnet/assets/script.js"></script>
 </body>
 </html>

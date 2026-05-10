@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 /**
  * Database Configuration & Connection
  * Social Network Application
@@ -7,7 +10,7 @@
 // Database credentials
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', '123456');
 define('DB_NAME', 'socialnet');
 
 // Create connection

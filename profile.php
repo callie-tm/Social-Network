@@ -3,9 +3,9 @@
  * Profile Page
  * Social Network Application
  */
-require_once __DIR__ . '/../includes/config.php';
-require_once __DIR__ . '/../includes/session.php';
-require_once __DIR__ . '/../includes/functions.php';
+require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/session.php';
+require_once __DIR__ . '/includes/functions.php';
 
 requireLogin();
 
@@ -27,10 +27,10 @@ if (!$profileUser) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?= $notFound ? 'User not found' : e($profileUser['fullname']) . ' profile on SocialNet' ?>">
     <title><?= $notFound ? 'User Not Found' : e($profileUser['fullname']) ?> - SocialNet</title>
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/socialnet/assets/style.css">
 </head>
 <body>
-    <?php include __DIR__ . '/../includes/menubar.php'; ?>
+    <?php include __DIR__ . '/includes/menubar.php'; ?>
 
     <div class="page-wrapper">
         <div class="container">
@@ -77,6 +77,6 @@ if (!$profileUser) {
         <p>© <?= date('Y') ?> SocialNet. All rights reserved.</p>
     </footer>
 
-    <script src="/assets/script.js"></script>
+    <script src="/socialnet/assets/script.js"></script>
 </body>
 </html>
