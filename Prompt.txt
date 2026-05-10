@@ -1,0 +1,92 @@
+═══════════════════════════════════════════════════════════════════════════════
+PROMPT NGẮN GỌN (Ready-to-Paste) - COPY VÀO AGENT
+═══════════════════════════════════════════════════════════════════════════════
+
+---COPY TOÀN BỘ TEXT DƯỚI ĐÂY VÀO AGENT ANTHROPIC CLAUDE---
+
+Tôi cần bạn xây dựng một ứng dụng Web "Social Network" hoàn chỉnh sử dụng PHP, MySQL, Nginx và Linux.
+
+REQUIREMENTS:
+
+DATABASE:
+- Tạo database "socialnet"
+- Tạo bảng "account": id (INT PK), username (VARCHAR 50 UNIQUE), fullname (VARCHAR 100), password (VARCHAR 255), description (TEXT), created_at (TIMESTAMP)
+- Tạo file db.sql chứa toàn bộ SQL commands
+
+PROJECT STRUCTURE:
+/admin/newuser.php - Form tạo user mới (validate, hash password, insert DB)
+/socialnet/signin.php - Login page (validate, check password, create session)
+/socialnet/index.php - Home page (check login, show current user info, list all users with links to profile)
+/socialnet/profile.php - Profile page (accept ?owner query string, show user info & description)
+/socialnet/setting.php - Edit profile page (form to edit description, save to DB)
+/socialnet/about.php - Static page (show student name & number)
+/socialnet/signout.php - Logout (destroy session, redirect)
+/includes/config.php - DB configuration & connection
+/includes/functions.php - Helper functions
+/includes/menubar.php - Reusable navbar (links: Home, Setting, Profile, About, SignOut)
+/includes/session.php - Session management functions
+/assets/style.css - Professional styling
+/assets/script.js - Optional JS helpers
+README.md - Setup instructions
+.gitignore - Git ignore file
+
+MENUBAR (in home/profile/setting/about pages):
+- Home → /socialnet/index.php
+- Setting → /socialnet/setting.php
+- Profile → /socialnet/profile.php
+- About → /socialnet/about.php
+- SignOut → /socialnet/signout.php
+
+FUNCTIONALITY:
+✓ All pages check login, redirect to signin if not logged in
+✓ Admin page: validate input, hash password, check username unique, insert DB
+✓ Signin page: validate, query DB, password_verify(), create session, redirect to home
+✓ Home page: show current user info, list all users with profile links
+✓ Profile page: accept optional ?owner parameter, show profile owner name & description
+✓ Setting page: show current description in textarea, save changes to DB
+✓ Signout: destroy session, redirect to signin
+✓ Password: always use password_hash() and password_verify()
+✓ Session: store user_id, username, fullname in $_SESSION
+✓ CSS: professional, responsive design
+✓ Error handling: graceful error messages
+
+IMPORTANT:
+✓ No errors - code must be production-ready
+✓ Include sample data in db.sql (2-3 test users with hashed passwords)
+✓ README.md must include setup instructions: prerequisites, clone, import db.sql, configure config.php, start services
+✓ Code is ready to push to GitHub (public repo)
+✓ Do NOT use SSH or bash - just create PHP/SQL/CSS files
+
+DELIVERABLES:
+1. All PHP files with complete functionality
+2. db.sql file with database schema and sample data
+3. config.php with proper database configuration
+4. Organized folder structure
+5. Professional CSS styling
+6. README.md with setup guide
+7. .gitignore file
+8. Ready for GitHub push
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ AFTER YOU SEND THIS PROMPT:
+
+Agent sẽ create toàn bộ files. Bạn sẽ nhận được:
+1. Tất cả PHP files đã viết
+2. db.sql file
+3. README.md
+4. CSS & JS files
+
+Sau đó BẠN CẦN LÀM:
+1. Tạo folder project trên máy local
+2. Copy/paste tất cả files từ Agent output
+3. Tạo git repo, push lên GitHub
+4. Trên server (SSH):
+   - sudo apt install php php-fpm php-mysqli nginx mysql-server -y
+   - sudo systemctl start nginx mysql
+   - Tạo database & user (follow README.md)
+   - Import db.sql
+   - Config Nginx document root
+   - Access http://localhost/socialnet/signin.php
+
+═══════════════════════════════════════════════════════════════════════════════
