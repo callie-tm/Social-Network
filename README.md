@@ -104,7 +104,7 @@ sudo systemctl reload nginx
 
 ### 6. Access the Application
 
-- **Sign In**: http://localhost/socialnet/signin.php
+- **Sign In**: http://192.168.129.131/socialnet/signin.php
 - **Admin (Create User)**: http://localhost/admin/newuser.php
 
 ### 7. Test Accounts
